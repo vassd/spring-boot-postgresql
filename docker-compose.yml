@@ -1,0 +1,15 @@
+version: "3.2"
+services:
+  postgres:
+    image: 'postgres'
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=test
+      - POSTGRES_DB=mydb
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
